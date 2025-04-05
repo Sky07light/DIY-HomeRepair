@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeFix - DIY Repair Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <div class="login-form">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>HomeFix</h1>
+            </div>
+            <h2>DIY Repair Assistant</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button id="login-btn" class="btn-primary">Login</button>
+        </div>
+    </div>
+
+    <div id="app-container" class="container hidden">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>HomeFix</h1>
+            </div>
+            <button id="logout-btn" class="btn-outline">Logout</button>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>DIY Home Repair Assistant</h2>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot">
+                        <div class="message-content">
+                            <p>Hello! I'm your DIY Home Repair Assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Describe your home repair issue...">
+                    <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                    <button id="speak-btn"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+
+            <div class="features-container">
+                <div class="feature">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Common Repairs</h3>
+                    <ul>
+                        <li data-query="How to fix a leaky faucet?">Leaky Faucet</li>
+                        <li data-query="How to unclog a drain?">Clogged Drain</li>
+                        <li data-query="How to patch drywall?">Drywall Repair</li>
+                        <li data-query="How to fix a running toilet?">Running Toilet</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Tools Guide</h3>
+                    <ul>
+                        <li data-query="What tools do I need for basic plumbing repairs?">Plumbing Tools</li>
+                        <li data-query="What tools do I need for electrical repairs?">Electrical Tools</li>
+                        <li data-query="Essential tools for home repairs?">Essential Tools</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-phone"></i>
+                    <h3>Local Help</h3>
+                    <button id="find-local-help" class="btn-secondary">Find Local Repair Shops</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="local-help-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Local Repair Services</h2>
+            <div class="local-services">
+                <div class="service">
+                    <h3>Quick Fix Plumbing</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main St</p>
+                    <p><i class="fas fa-star"></i> 4.8/5 (120 reviews)</p>
+                </div>
+                <div class="service">
+                    <h3>Electric Solutions</h3>
+                    <p><i class="fas fa-phone"></i> (555) 987-6543</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 456 Oak Ave</p>
+                    <p><i class="fas fa-star"></i> 4.6/5 (95 reviews)</p>
+                </div>
+                <div class="service">
+                    <h3>Handyman Heroes</h3>
+                    <p><i class="fas fa-phone"></i> (555) 567-8901</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 789 Elm Blvd</p>
+                    <p><i class="fas fa-star"></i> 4.9/5 (150 reviews)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
